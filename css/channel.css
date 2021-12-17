@@ -4,19 +4,6 @@
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-body {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow-x: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(32.87%, #010001), color-stop(43.41%, #060006), color-stop(55.73%, #010001), color-stop(69.79%, #050105), to(#0B000C));
-  background: linear-gradient(180deg, #010001 32.87%, #060006 43.41%, #010001 55.73%, #050105 69.79%, #0B000C 100%);
-}
-
-header {
-  width: 100%;
-  position: relative;
-  height: 870px;
-}
-
 header nav.gnb {
   z-index: 100000000;
   position: fixed;
@@ -127,7 +114,17 @@ header nav.gnb .main_nav {
 header nav.gnb .main_nav li {
   list-style: none;
   font-size: 14px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+header nav.gnb .main_nav li a {
+  text-decoration: none;
   color: #fff;
+}
+
+header nav.gnb .main_nav li a:hover {
+  color: #a0a0a0;
 }
 
 header nav.gnb .sub_nav {
@@ -146,6 +143,19 @@ header nav.gnb .sub_nav {
 
 header nav.gnb .sub_nav img {
   width: 24px;
+}
+
+body {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(32.87%, #010001), color-stop(43.41%, #060006), color-stop(55.73%, #010001), color-stop(69.79%, #050105), to(#0B000C));
+  background: linear-gradient(180deg, #010001 32.87%, #060006 43.41%, #010001 55.73%, #050105 69.79%, #0B000C 100%);
+}
+
+header {
+  width: 100%;
+  position: relative;
+  height: 870px;
 }
 
 header .img_container {
@@ -463,7 +473,8 @@ main section {
   overflow: hidden;
 }
 
-main section > h1 {
+main section > h1,
+main section > div > h1 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
@@ -527,11 +538,16 @@ main .channel_section {
           box-sizing: border-box;
 }
 
-main .channel_section .item_container {
+main .channel_section .one {
+  width: 100%;
+  overflow: hidden;
+}
+
+main .channel_section .one .item_container {
   margin-bottom: 64px;
 }
 
-main .channel_section .item_container .items {
+main .channel_section .one .item_container .items {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,18 +565,18 @@ main .channel_section .item_container .items {
   overflow: hidden;
 }
 
-main .channel_section .item_container .items .item {
+main .channel_section .one .item_container .items .item {
   width: 282px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 23%;
           flex: 0 1 23%;
 }
 
-main .channel_section .item_container .items .item img {
+main .channel_section .one .item_container .items .item img {
   width: 100%;
 }
 
-main .channel_section .item_container .items .item .txt_container {
+main .channel_section .one .item_container .items .item .txt_container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -578,41 +594,41 @@ main .channel_section .item_container .items .item .txt_container {
   margin-top: 8px;
 }
 
-main .channel_section .item_container .items .item .txt_container .channel1 {
+main .channel_section .one .item_container .items .item .txt_container .channel1 {
   background: url(../img/channel1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-main .channel_section .item_container .items .item .txt_container .channel2 {
+main .channel_section .one .item_container .items .item .txt_container .channel2 {
   background: url(../img/channel2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-main .channel_section .item_container .items .item .txt_container .channel3 {
+main .channel_section .one .item_container .items .item .txt_container .channel3 {
   background: url(../img/channel3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-main .channel_section .item_container .items .item .txt_container .channel4 {
+main .channel_section .one .item_container .items .item .txt_container .channel4 {
   background: url(../img/channel4.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-main .channel_section .item_container .items .item .txt_container .channel {
+main .channel_section .one .item_container .items .item .txt_container .channel {
   width: 40px;
   height: 40px;
   border-radius: 100%;
 }
 
-main .channel_section .item_container .items .item .txt_container .txt {
+main .channel_section .one .item_container .items .item .txt_container .txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -627,7 +643,7 @@ main .channel_section .item_container .items .item .txt_container .txt {
   margin-left: 8px;
 }
 
-main .channel_section .item_container .items .item .txt_container .txt h1 {
+main .channel_section .one .item_container .items .item .txt_container .txt h1 {
   font-size: 14px;
   color: #fff;
   font-weight: 300;
@@ -635,18 +651,18 @@ main .channel_section .item_container .items .item .txt_container .txt h1 {
   margin: 0;
 }
 
-main .channel_section .item_container .items .item .txt_container .txt h2 {
+main .channel_section .one .item_container .items .item .txt_container .txt h2 {
   font-size: 12px;
   color: #C2C2C2;
   font-weight: 300;
   line-height: 14px;
 }
 
-main .channel_section .song_container {
+main .channel_section .one .song_container {
   width: 100%;
 }
 
-main .channel_section .song_container .items {
+main .channel_section .one .song_container .items {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,33 +676,171 @@ main .channel_section .song_container .items {
           justify-content: space-between;
 }
 
-main .channel_section .song_container .items .item {
+main .channel_section .one .song_container .items .item {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 14%;
           flex: 0 1 14%;
 }
 
-main .channel_section .song_container .items .item img {
+main .channel_section .one .song_container .items .item img {
   width: 100%;
   border-radius: 10px;
 }
 
-main .channel_section .song_container .items .item .txt {
+main .channel_section .one .song_container .items .item .txt {
   text-align: center;
 }
 
-main .channel_section .song_container .items .item .txt h1 {
+main .channel_section .one .song_container .items .item .txt h1 {
   color: #fff;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 8px;
 }
 
-main .channel_section .song_container .items .item .txt h2 {
+main .channel_section .one .song_container .items .item .txt h2 {
   color: #9C9C9C;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+}
+
+main .channel_section .two .item_container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+main .channel_section .two .item_container .input_box {
+  width: 920px;
+  position: relative;
+  top: 0;
+  left: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+main .channel_section .two .item_container .input_box label {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main .channel_section .two .item_container .input_box > div {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-top: 16px;
+  margin-left: 16px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing .channel {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background: url(../img/channel1.png);
+  margin-left: 16px;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea {
+  width: 70%;
+  height: 100px;
+  resize: none;
+  background: rgba(0, 0, 0, 0);
+  margin-left: 16px;
+  border: none;
+  color: #fff;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea::-webkit-input-placeholder {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 12px;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea:-ms-input-placeholder {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 12px;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea::-ms-input-placeholder {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 12px;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea::placeholder {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 12px;
+}
+
+main .channel_section .two .item_container .input_box > div .inputing textarea:focus {
+  outline: none;
+}
+
+main .channel_section .two .item_container .input_box > div .btn_container {
+  width: 20%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+main .channel_section .two .item_container .input_box > div .btn_container .btn1 {
+  border-radius: 4px;
+  width: 114px;
+  line-height: 30px;
+  background: #424242;
+}
+
+main .channel_section .two .item_container .input_box > div .btn_container .btn2 {
+  width: 130px;
+  line-height: 30px;
+  background: #0046DA;
+  border-radius: 4px;
+  margin-left: 8px;
 }
 
 footer {
