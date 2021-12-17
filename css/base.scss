@@ -1,0 +1,113 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color:#fff;
+}
+
+
+header {
+    nav.gnb {
+        z-index: 100000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 14vh;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 360px;
+        box-sizing: border-box;
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 360px;
+            transform: translateY(-50%);
+            width: 54px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .search_bar {
+            width: 378px;
+            height: 40px;
+            border-radius: 20px;
+            border: 2px solid #fff;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 16px;
+            box-sizing: border-box;
+            margin-right: 48px;
+
+            .input {
+                width: 90%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0);
+                border: none;
+
+                &:focus {
+                    border: none;
+                }
+            }
+
+            .search {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+        }
+
+        .main_nav {
+            padding-left: 0;
+            width: 318px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-right: 48px;
+
+            li {
+                list-style: none;
+                font-size: 14px;
+                transition: 0.1s;
+
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: rgb(160, 160, 160);
+                    }
+                }
+            }
+
+        }
+
+        .sub_nav {
+            width: 102px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            img {
+                width: 24px;
+            }
+        }
+
+    }
+}

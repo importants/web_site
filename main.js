@@ -1,18 +1,25 @@
 $(function(){
-    $(".channel_section li").click(function(){
+    $(".channel_section nav ul li").click(function(){
+        
         if($(this).index()==0){  
-            console.log()     
+            $(".channel_section li").removeClass("active");
+         
             $(".one").css("display","block");
             $(".two").css("display","none");
+            
+            $(this).addClass("active")
         }
 
     })
-    $(".channel_section li").click(function(){
+    
+    $(".channel_section nav ul li").click(function(){
+
         if($(this).index()==3){      
+            $(".channel_section li").removeClass("active");
             $(".two").css("display","block");
             $(".one").css("display","none");
+            
+            $(this).addClass("active");
         }
-
     })
-
 })

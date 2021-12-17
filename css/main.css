@@ -2,37 +2,8 @@
   padding: 0px;
   margin: 0px;
   font-family: 'Noto Sans KR', sans-serif;
-}
-
-body {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow-x: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(32.87%, #010001), color-stop(43.41%, #060006), color-stop(55.73%, #010001), color-stop(69.79%, #050105), to(#0B000C));
-  background: linear-gradient(180deg, #010001 32.87%, #060006 43.41%, #010001 55.73%, #050105 69.79%, #0B000C 100%);
-}
-
-body > .img_container {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body > .img_container .guitar {
-  position: absolute;
-  top: 1350px;
-  left: -100px;
-  z-index: -100;
-}
-
-body > .img_container .audio {
-  position: absolute;
-  top: 2001px;
-  right: 0;
-  z-index: -100;
-}
-
-header {
-  width: 100%;
-  height: 440px;
+  text-decoration: none;
+  color: #fff;
 }
 
 header nav.gnb {
@@ -145,7 +116,17 @@ header nav.gnb .main_nav {
 header nav.gnb .main_nav li {
   list-style: none;
   font-size: 14px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+header nav.gnb .main_nav li a {
+  text-decoration: none;
   color: #fff;
+}
+
+header nav.gnb .main_nav li a:hover {
+  color: #a0a0a0;
 }
 
 header nav.gnb .sub_nav {
@@ -164,6 +145,37 @@ header nav.gnb .sub_nav {
 
 header nav.gnb .sub_nav img {
   width: 24px;
+}
+
+body {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(32.87%, #010001), color-stop(43.41%, #060006), color-stop(55.73%, #010001), color-stop(69.79%, #050105), to(#0B000C));
+  background: linear-gradient(180deg, #010001 32.87%, #060006 43.41%, #010001 55.73%, #050105 69.79%, #0B000C 100%);
+}
+
+body > .img_container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body > .img_container .guitar {
+  position: absolute;
+  top: 1350px;
+  left: -100px;
+  z-index: -100;
+}
+
+body > .img_container .audio {
+  position: absolute;
+  top: 2001px;
+  right: 0;
+  z-index: -100;
+}
+
+header {
+  width: 100%;
+  height: 440px;
 }
 
 header .video {
@@ -254,11 +266,29 @@ header .video .black .btn_box .btn {
   border-radius: 20px;
   text-align: center;
   line-height: 40px;
-  color: #fff;
   font-size: 16px;
   margin-right: 24px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  color: #fff;
+}
+
+header .video .black .btn_box .btn:hover {
+  background: #0047df;
+}
+
+header .video .black .btn_box .btn a {
+  color: #fff;
+}
+
+header .video .black .btn_box .btn:hover {
+  background: #0047df;
+}
+
+header .video .black .btn_box .btn.acitve {
+  background: #014df2;
 }
 
 header .video .black .btn_box .channel {
@@ -270,6 +300,13 @@ header .video .black .btn_box .channel {
   background-position: center;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+header .video .black .btn_box .channel:hover {
+  opacity: 0.7;
 }
 
 header .video video {
